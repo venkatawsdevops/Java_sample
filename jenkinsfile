@@ -1,6 +1,12 @@
 pipeline {
     agent any
 
+    tools {
+        
+        maven "maven"
+        jdk "java"
+    }
+
     stages {
         stage('Hello') {
             steps {
@@ -9,7 +15,8 @@ pipeline {
         }
         stage('build'){
             steps {
-                sh 'echo hello world2'
+                sh '$JAVA_HOME'
+                sh '$M2_HOME'
             }
         }
         stage('test'){
