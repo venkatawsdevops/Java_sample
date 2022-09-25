@@ -4,17 +4,17 @@ pipeline {
     stages {
         stage('Hello') {
             steps {
-                sh 'ls -ltrh /root'
+                sh 'echo test in third'
             }
         }
         stage('build'){
             steps {
-                echo 'hello world2'
+                sh 'echo hello world2'
             }
         }
         stage('test'){
             steps {
-                echo 'this is testing phase'
+                sh 'echo this is testing phase'
             }
         }
     }
